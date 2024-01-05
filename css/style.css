@@ -1,0 +1,189 @@
+/* line 1, ../vs_code/html/69-landing-ballons/sass/style.sass */
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 6, ../vs_code/html/69-landing-ballons/sass/style.sass */
+html {
+  font-size: 10px;
+}
+
+/* line 9, ../vs_code/html/69-landing-ballons/sass/style.sass */
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #777777;
+  font-size: 1.6rem;
+  letter-spacing: .2rem;
+  padding: 5rem;
+  background-color: white;
+}
+
+/* line 18, ../vs_code/html/69-landing-ballons/sass/style.sass */
+.container {
+  background: #F7F7F7;
+  height: 500px;
+  width: 100%;
+}
+
+/* line 23, ../vs_code/html/69-landing-ballons/sass/style.sass */
+.header {
+  position: relative;
+  height: 95vh;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../images/bg-main.jpg) center/cover no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+
+/* line 28, ../vs_code/html/69-landing-ballons/sass/style.sass */
+.header__logo {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+  height: 7rem;
+  width: 5.6rem;
+}
+
+/* line 34, ../vs_code/html/69-landing-ballons/sass/style.sass */
+.header__box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+/* line 42, ../vs_code/html/69-landing-ballons/sass/style.sass */
+.title-first {
+  color: #FFF;
+}
+
+/* line 44, ../vs_code/html/69-landing-ballons/sass/style.sass */
+.title-first__main {
+  display: block;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  animation-name: leftToRight;
+  animation-duration: 2s;
+  /* animation-delay: 1s */
+  animation-timing-function: ease;
+  backface-visibility: hidden;
+}
+
+/* line 57, ../vs_code/html/69-landing-ballons/sass/style.sass */
+.title-first__secondary {
+  display: block;
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: .5rem;
+  animation-name: RightToLeft;
+  animation-duration: 2s;
+  /* animation-delay: 1s */
+  animation-timing-function: ease;
+  backface-visibility: hidden;
+  margin-bottom: 6.5rem;
+}
+
+/* line 71, ../vs_code/html/69-landing-ballons/sass/style.sass */
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #777;
+  padding: 1.5rem 4rem;
+  background: white;
+  border: none;
+  border-radius: 5rem;
+  display: inline-block;
+  font-size: 2rem;
+  line-height: normal;
+  letter-spacing: .5rem;
+  transition: all .3s;
+  position: relative;
+}
+
+/* line 85, ../vs_code/html/69-landing-ballons/sass/style.sass */
+.btn:link:hover, .btn:visited:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* line 88, ../vs_code/html/69-landing-ballons/sass/style.sass */
+.btn:link:hover::after, .btn:visited:hover::after {
+  opacity: 0;
+  transform: scaleX(1.5) scaleY(1.7);
+}
+
+/* line 91, ../vs_code/html/69-landing-ballons/sass/style.sass */
+.btn:link:active, .btn:visited:active {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* line 94, ../vs_code/html/69-landing-ballons/sass/style.sass */
+.btn:link::after, .btn:visited::after {
+  content: "";
+  background: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 5rem;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .7s;
+}
+
+/* line 106, ../vs_code/html/69-landing-ballons/sass/style.sass */
+.btn_animated {
+  animation: BtnToUp 2s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes leftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes RightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes BtnToUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
